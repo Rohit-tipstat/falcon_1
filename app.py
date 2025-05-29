@@ -49,6 +49,9 @@ if not openai_key:
     logger.error("OPENAI_API_KEY environment variable is not set")
     raise ValueError("OPENAI_API_KEY environment variable is not set")
 
+
+
+
 llm = ChatOpenAI(
     openai_api_key=openai_key,
     model="gpt-4.1",
@@ -64,6 +67,15 @@ llm_o3 = ChatOpenAI(
 )
 
 client = OpenAI(api_key=openai_key)
+
+
+
+
+#  Exa API-key
+exa_key = os.environ.get("EXA_API_KEY")
+if not exa_key:
+    logger.error("EXA_API_KEY environment variable is not set")
+    raise ValueError("EXA_API_KEY environment variable is not set")
 
 # Pydantic models
 class FuelComposition(BaseModel):
@@ -130,7 +142,7 @@ def exa_search(query: str):
         info_dict = {}
         client = OpenAI(
             base_url="https://api.exa.ai",
-            api_key="d0881403-d07a-449d-a79e-0b653bf2c3f5"
+            api_key=exa_key
         )
         completion = client.chat.completions.create(
             model="exa-pro",
