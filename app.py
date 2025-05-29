@@ -202,7 +202,7 @@ NOTE: - No waste category is considered for recycling or composting in this task
         model=llm,
         tools=[search_engine_duckduckgo, exa_search, search_engine_openai],
         name="sorting_supervisor",
-        state_modifier=sorting_supervisor_prompt
+        prompt=sorting_supervisor_prompt
     )
 
     # Sorting Engineer Agent
