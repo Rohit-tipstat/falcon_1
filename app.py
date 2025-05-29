@@ -29,7 +29,7 @@ logger = logging.getLogger(__name__)
 
 # Initialize FastAPI app
 app = FastAPI(
-    title="Waste Processing API",
+    title="fuel output API",
     description="API to process MSW composition through sorting and RDF production.",
     version="1.0.0"
 )
