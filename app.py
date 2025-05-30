@@ -471,11 +471,11 @@ Note: - Ensure that the processes are executed accurately, with clear coordinati
                     Make sure you run all the agents that have **yes** in front of them.\n
                     Determine the waste composition after processing through the following stages:\n
                     1) Sorting Supervisor Agent: Removal of large, non-processable items. - yes\n
-                    2) Sorting Engineer Agent: Mechanical sorting and refuse-derived fuel (RDF) production. - yes\n
+                    2) Sorting Engineer Agent: Mechanical sorting and refuse-derived fuel (RDF) production. - no\n
                     3) Chlorine Reduction Specialist Agent: Reduction of chlorine content. - {pvc_removal_step}\n
                     4) Shredding and Purification Technician Agent: Shredding and fine metal removal. - {shredding_step}\n
-                    5) R4 Process Engineer Agent: Dynamic organic repolymerization of RDF. - yes\n
-                    6) Water Bath Process Engineer Agent: to reduce temperature and remove surface chlorine of the fuel. - yes\n\n
+                    5) R4 Process Engineer Agent: Dynamic organic repolymerization of RDF. - no\n
+                    6) Water Bath Process Engineer Agent: to reduce temperature and remove surface chlorine of the fuel. - no\n\n
                     Provide a detailed explanation of each process, including:\n
                     - The specific components removed and the rationale for their removal.
                     - The resulting waste composition after each stage.
