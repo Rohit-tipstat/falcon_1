@@ -43,6 +43,21 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
+# Log CORS preflight requests
+@app.options("/fuel-output/")
+async def handle_options():
+    logger.info("Received CORS preflight OPTIONS request for /fuel-output/")
+    return {"status": "success"}
+
+# Health check endpoint to verify server is running
+@app.get("/health")
+async def health_check():
+    logger.info("Health check endpoint accessed")
+    return {"status": "healthy", "message": "API is running"}
+
+
+
 # Initialize OpenAI client and LLM
 openai_key = os.environ.get("OPENAI_API_KEY")
 if not openai_key:
